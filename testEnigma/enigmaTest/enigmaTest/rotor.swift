@@ -54,15 +54,19 @@ class Rotor {
         return rotorPosition
     }
     
-    func updateRotorPosition () {
+    func updateRotorPosition () -> Bool {
+        var updateNextRotor: Bool = false
         if(rotorPosition == 25)
         {
-            rotorPosition = 0;
+            updateNextRotor = true
+            rotorPosition = 0
         }
         else
         {
+            updateNextRotor = false
             rotorPosition+=1
         }
+        return updateNextRotor
     }
     
     func getRotorValue (charIndex: Int) -> Int {

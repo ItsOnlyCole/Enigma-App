@@ -23,3 +23,5 @@ charValue = testRotors.encodeValue(newCharIndex: charValue)
 print(charValue)
 charValue = testRotors.encodeValue(newCharIndex: charValue)
 print(charValue)
+testRotors.updateRotorsPositions()
+for i in 0...2 {print(testRotors.getRotorPosition(rotorNumber: i))}
