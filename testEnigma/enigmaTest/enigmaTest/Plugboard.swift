@@ -12,7 +12,6 @@ class Plugboard {
     private var plugs: [Plug]!
     
     init () {
-        
     }
     
     func addPlug(charOne: Int, charTwo: Int) {
@@ -42,6 +41,11 @@ class Plugboard {
             return
         }
     }
+    
+    func removePlug(index: Int) {
+        plugs.remove(at: index)
+    }
+    
     func isCharInUse(char: Int) -> Bool {
         for i in 0...plugs.count-1
         {
@@ -54,5 +58,41 @@ class Plugboard {
             }
         }
         return false
+    }
+    
+    func passCharThroughPlugboard(char: Int) -> Int {
+        for i in 0...plugs.count-1
+        {
+            for j in 0...1
+            {
+                if (char == plugs[i].getChar(index: j))
+                {
+                    //Returns the connected char in plug
+                    if(j == 0)
+                    {
+                        return plugs[i].getChar(index: 1)
+                    }
+                    else if (j == 1)
+                    {
+                        return plugs[i].getChar(index: 0)
+                    }
+                }
+            }
+        }
+        //returns original char if not connected to plugboard
+        return char
+    }
+    
+    func getPlugInfo(index: Int) -> String {
+        let infoString = ("Plug #\(index): \(plugs[index].getChar(index: 0)) - \(plugs[index].getChar(index: 1))")
+        return infoString
+    }
+    func getAllPlugsInfo() -> String {
+        var infoString: String = ""
+        for index in 0 ... plugs.count-1
+        {
+            infoString = ("Plug #\(index): \(plugs[index].getChar(index: 0)) - \(plugs[index].getChar(index: 1))\n")
+        }
+        return infoString
     }
 }
