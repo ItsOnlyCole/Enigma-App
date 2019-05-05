@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "enigmaTest/Plugboard.swift"
-            timestampString = "578750749.9672641"
+            timestampString = "578753355.942737"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "isCharInUse(char:)"
             landmarkType = "7">
          </BreakpointContent>

@@ -9,7 +9,7 @@
 import Foundation
 
 class Plugboard {
-    private var plugs: [Plug]!
+    private var plugs = [Plug]()
     
     init () {
     }
@@ -47,6 +47,10 @@ class Plugboard {
     }
     
     func isCharInUse(char: Int) -> Bool {
+        if (plugs.isEmpty == true)
+        {
+            return false
+        }
         for i in 0...plugs.count-1
         {
             for j in 0...1
@@ -61,6 +65,10 @@ class Plugboard {
     }
     
     func passCharThroughPlugboard(char: Int) -> Int {
+        if (plugs.isEmpty == true)
+        {
+            return char
+        }
         for i in 0...plugs.count-1
         {
             for j in 0...1

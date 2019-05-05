@@ -13,7 +13,7 @@ class Plug {
     
     init(charOne: Int, charTwo: Int) {
         updatePlugConnections(index: 0, char: charOne)
-        updatePlugConnections(index: 0, char: charTwo)
+        updatePlugConnections(index: 1, char: charTwo)
     }
     
     func updatePlugConnections(index: Int, char: Int) {
@@ -22,6 +22,7 @@ class Plug {
             print("Index is out of range")
             return
         }
+        /*
         else if (index == 0 && connectedChar[1] == char)
         {
             print("Plug can't be connected to itself")
@@ -32,6 +33,7 @@ class Plug {
             print("Plug can't be connected to itself")
             return
         }
+        */
         else if (char < 0 || char > 25)
         {
             print("Not a valide char")

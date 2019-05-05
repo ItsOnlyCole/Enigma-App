@@ -38,10 +38,12 @@ for i in 0...2
 }
 */
 
-var myString:String = "supercalifragilisticexpialidocious"
+var myString:String = "cat"
 var charValues = [Int]()
 var encodedCharValues = [Int]()
 var decodedCharValues = [Int]()
+var myPlugBoard = Plugboard()
+myPlugBoard.addPlug(charOne: 0, charTwo: 23)
 
 for i in myString
 {
@@ -53,7 +55,10 @@ print(myString)
 myString = ""
 for i in 0...charValues.count-1
 {
-    encodedCharValues.append(testRotors.encodeValue(newCharIndex: charValues[i]))
+    encodedCharValues.append(myPlugBoard.passCharThroughPlugboard(char: charValues[i]))
+    encodedCharValues[i] = testRotors.encodeValue(newCharIndex: encodedCharValues[i])
+    encodedCharValues[i] = myPlugBoard.passCharThroughPlugboard(char: encodedCharValues[i])
+    //encodedCharValues.append(testRotors.encodeValue(newCharIndex: charValues[i]))
     //print(endcodedCharValues[i])
     myString += String(testRotors.convertToChar(charIndex: encodedCharValues[i]))
 }
@@ -64,7 +69,10 @@ myString = ""
 testRotors.resetRotorPositions()
 for i in 0...encodedCharValues.count-1
 {
-    decodedCharValues.append(testRotors.encodeValue(newCharIndex: encodedCharValues[i]))
+    decodedCharValues.append(myPlugBoard.passCharThroughPlugboard(char: encodedCharValues[i]))
+    decodedCharValues[i] = testRotors.encodeValue(newCharIndex: decodedCharValues[i])
+    decodedCharValues[i] = myPlugBoard.passCharThroughPlugboard(char: decodedCharValues[i])
+    //decodedCharValues.append(testRotors.encodeValue(newCharIndex: encodedCharValues[i]))
     myString += String(testRotors.convertToChar(charIndex: decodedCharValues[i]))
 }
 print(myString)
