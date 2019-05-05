@@ -8,10 +8,18 @@
 
 //import Foundation
 
+/*
 var testRotor = Rotor(rotorNumber: 1)
 
 var value = testRotor.getRotorValue(position: 5)
 
 print(value)
+*/
+var testRotors = Rotors(rotorOneNumber: 1, rotorTwoNumber: 2, rotorThreeNumber: 3)
 
-
+var charValue: Int = 2 //Value for C
+print(charValue)
+charValue = testRotors.encodeValue(newCharIndex: charValue)
+print(charValue)
+charValue = testRotors.encodeValue(newCharIndex: charValue)
+print(charValue)

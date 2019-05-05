@@ -17,10 +17,8 @@ class Rotor {
     init(rotorNumber: Int) {
         self.rotorNumber = rotorNumber
         setRotorConnections(rotorNumber: rotorNumber)
-        
     }
     
-   
     func setRotorConnections(rotorNumber: Int) {
         switch (rotorNumber)
         {
@@ -49,6 +47,9 @@ class Rotor {
         self.rotorNumber = rotorNumber
     }
     
+    func setRotorPosition (position: Int) {
+        rotorPosition = position
+    }
     func getRotorPosition () -> Int {
         return rotorPosition
     }
@@ -64,7 +65,17 @@ class Rotor {
         }
     }
     
-    func getRotorValue (position: Int) -> Int {
-        return rotorConnections[position]
+    func getRotorValue (charIndex: Int) -> Int {
+        return rotorConnections[charIndex]
+    }
+    func getRotorReflectedValue (charIndex: Int) -> Int {
+        for i in 0...25
+        {
+            if (rotorConnections[i] == charIndex)
+            {
+                return i
+            }
+        }
+        return -1
     }
 }
