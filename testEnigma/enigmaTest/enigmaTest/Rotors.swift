@@ -52,15 +52,20 @@ class Rotors {
     }
     func encodeValue(newCharIndex: Int) -> Int {
         charIndex = newCharIndex
+        print(charIndex)
         for i in 0...2
         {
             charIndex = getValue(rotor: i, charIndex: charIndex)
+            print(charIndex)
         }
         charIndex = reflectValue(charIndex: charIndex)
+        print(charIndex)
         for i in (0...2).reversed()
         {
             charIndex = getReflectedValue(rotor: i, charIndex: charIndex)
+            print(charIndex)
         }
+        updateRotorsPositions()
         return charIndex
     }
     func updateRotorsPositions () {
@@ -75,5 +80,11 @@ class Rotors {
     }
     func getRotorPosition(rotorNumber: Int) -> Int {
         return rotors[rotorNumber].getRotorPosition()
+    }
+    func resetRotorPositions() {
+        for i in 0...2
+        {
+            rotors[i].setRotorPosition(position: 0)
+        }
     }
 }
