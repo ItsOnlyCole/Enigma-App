@@ -8,5 +8,10 @@
 
 //import Foundation
 
-print("Hello, World!")
+var testRotor = Rotor(rotorNumber: 1)
+
+var value = testRotor.getRotorValue(position: 5)
+
+print(value)
+
 
