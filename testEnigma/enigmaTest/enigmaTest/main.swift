@@ -38,7 +38,7 @@ for i in 0...2
 }
 */
 
-var myString:String = "cat"
+var myString:String = "supercalifragilisticexpialidocious"
 var charValues = [Int]()
 var encodedCharValues = [Int]()
 var decodedCharValues = [Int]()

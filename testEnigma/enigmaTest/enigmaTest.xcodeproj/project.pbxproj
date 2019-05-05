@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		810BD3A8227F00D800D63EA0 /* Plugboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BD3A7227F00D800D63EA0 /* Plugboard.swift */; };
+		810BD3AA227F01D800D63EA0 /* Plug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BD3A9227F01D800D63EA0 /* Plug.swift */; };
 		81780B90227E874600ECD421 /* Rotors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81780B8F227E874600ECD421 /* Rotors.swift */; };
 		81FB54D3227E611F00BC6A72 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FB54D2227E611F00BC6A72 /* main.swift */; };
 		81FB54DC227E624500BC6A72 /* Rotor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FB54DB227E624500BC6A72 /* Rotor.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		810BD3A7227F00D800D63EA0 /* Plugboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plugboard.swift; sourceTree = "<group>"; };
+		810BD3A9227F01D800D63EA0 /* Plug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plug.swift; sourceTree = "<group>"; };
 		81780B8F227E874600ECD421 /* Rotors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rotors.swift; sourceTree = "<group>"; };
 		81FB54CF227E611F00BC6A72 /* enigmaTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = enigmaTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81FB54D2227E611F00BC6A72 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 				81FB54D2227E611F00BC6A72 /* main.swift */,
 				81FB54DB227E624500BC6A72 /* Rotor.swift */,
 				81780B8F227E874600ECD421 /* Rotors.swift */,
+				810BD3A7227F00D800D63EA0 /* Plugboard.swift */,
+				810BD3A9227F01D800D63EA0 /* Plug.swift */,
 			);
 			path = enigmaTest;
 			sourceTree = "<group>";
@@ -127,6 +133,8 @@
 			files = (
 				81FB54DC227E624500BC6A72 /* Rotor.swift in Sources */,
 				81FB54D3227E611F00BC6A72 /* main.swift in Sources */,
+				810BD3A8227F00D800D63EA0 /* Plugboard.swift in Sources */,
+				810BD3AA227F01D800D63EA0 /* Plug.swift in Sources */,
 				81780B90227E874600ECD421 /* Rotors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
