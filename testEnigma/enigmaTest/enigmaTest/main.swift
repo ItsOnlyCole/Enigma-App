@@ -38,12 +38,22 @@ for i in 0...2
 }
 */
 
-var myString:String = "cat"
+var myString:String = "Montana"
+myString = myString.lowercased()
 var charValues = [Int]()
 var encodedCharValues = [Int]()
 var decodedCharValues = [Int]()
 var myPlugBoard = Plugboard()
-myPlugBoard.addPlug(charOne: 0, charTwo: 23)
+myPlugBoard.addPlug(charOne: 8, charTwo: 24)
+myPlugBoard.addPlug(charOne: 14, charTwo: 16)
+myPlugBoard.addPlug(charOne: 2, charTwo: 1)
+myPlugBoard.addPlug(charOne: 19, charTwo: 12)
+myPlugBoard.addPlug(charOne: 17, charTwo: 3)
+myPlugBoard.addPlug(charOne: 20, charTwo: 9)
+myPlugBoard.addPlug(charOne: 5, charTwo: 21)
+myPlugBoard.addPlug(charOne: 11, charTwo: 13)
+myPlugBoard.addPlug(charOne: 22, charTwo: 4)
+myPlugBoard.addPlug(charOne: 23, charTwo: 6)
 
 for i in myString
 {
@@ -56,8 +66,12 @@ myString = ""
 for i in 0...charValues.count-1
 {
     encodedCharValues.append(myPlugBoard.passCharThroughPlugboard(char: charValues[i]))
+    //print(encodedCharValues[i])
     encodedCharValues[i] = testRotors.encodeValue(newCharIndex: encodedCharValues[i])
+    //print(encodedCharValues[i])
     encodedCharValues[i] = myPlugBoard.passCharThroughPlugboard(char: encodedCharValues[i])
+    //print(encodedCharValues[i])
+    //print("\n")
     //encodedCharValues.append(testRotors.encodeValue(newCharIndex: charValues[i]))
     //print(endcodedCharValues[i])
     myString += String(testRotors.convertToChar(charIndex: encodedCharValues[i]))
@@ -70,8 +84,12 @@ testRotors.resetRotorPositions()
 for i in 0...encodedCharValues.count-1
 {
     decodedCharValues.append(myPlugBoard.passCharThroughPlugboard(char: encodedCharValues[i]))
+    //print(decodedCharValues[i])
     decodedCharValues[i] = testRotors.encodeValue(newCharIndex: decodedCharValues[i])
+    //print(decodedCharValues[i])
     decodedCharValues[i] = myPlugBoard.passCharThroughPlugboard(char: decodedCharValues[i])
+    //print(decodedCharValues[i])
+    //print("\n")
     //decodedCharValues.append(testRotors.encodeValue(newCharIndex: encodedCharValues[i]))
     myString += String(testRotors.convertToChar(charIndex: decodedCharValues[i]))
 }

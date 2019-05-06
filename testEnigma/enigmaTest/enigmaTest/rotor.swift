@@ -72,7 +72,7 @@ class Rotor {
     func getRotorValue (charIndex: Int) -> Int {
         if(charIndex + rotorPosition > 25)
         {
-            return rotorConnections[(charIndex+rotorPosition) -  25]
+            return rotorConnections[(charIndex+rotorPosition) -  26]
         }
         else
         {
@@ -86,8 +86,7 @@ class Rotor {
             {
                 if(i - rotorPosition < 0)
                 {
-                    
-                    return i - rotorPosition + 25
+                    return i - rotorPosition + 26
                 }
                 else
                 {

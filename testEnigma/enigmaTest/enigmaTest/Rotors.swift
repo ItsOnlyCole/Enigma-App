@@ -54,6 +54,7 @@ class Rotors {
     func encodeValue(newCharIndex: Int) -> Int {
         charIndex = newCharIndex
         //print(charIndex)
+        //print("((")
         for i in 0...2
         {
             charIndex = getValue(rotor: i, charIndex: charIndex)
@@ -66,6 +67,7 @@ class Rotors {
             charIndex = getReflectedValue(rotor: i, charIndex: charIndex)
             //print(charIndex)
         }
+        //print("))")
         updateRotorsPositions()
         return charIndex
     }
