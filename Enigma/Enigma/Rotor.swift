@@ -1,8 +1,8 @@
 //
 //  Rotor.swift
-//  enigmaTest
+//  Enigma
 //
-//  Created by user153545 on 5/4/19.
+//  Created by user153545 on 5/6/19.
 //  Copyright © 2019 ItsOnlyCole. All rights reserved.
 //
 
@@ -45,6 +45,9 @@ class Rotor {
     
     func setRotorNumber (rotorNumber: Int) {
         self.rotorNumber = rotorNumber
+    }
+    func getRotorNumber () -> Int {
+        return rotorNumber
     }
     
     func setRotorPosition (position: Int) {
@@ -95,5 +98,9 @@ class Rotor {
             }
         }
         return -1
+    }
+    
+    func getRotorConnections() -> Array<Int> {
+        return rotorConnections
     }
 }

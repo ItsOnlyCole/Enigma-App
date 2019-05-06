@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		816178DB2280A69300CF944C /* EnigmaModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816178DA2280A69300CF944C /* EnigmaModelController.swift */; };
+		816178E22280A7A400CF944C /* Plug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816178DE2280A7A400CF944C /* Plug.swift */; };
+		816178E42280A7A400CF944C /* Plugboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816178E02280A7A400CF944C /* Plugboard.swift */; };
+		816178E52280A7A400CF944C /* Rotors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816178E12280A7A400CF944C /* Rotors.swift */; };
+		816178E72280A7E200CF944C /* Rotor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816178E62280A7E200CF944C /* Rotor.swift */; };
+		818398B62280CD3C00ED35AB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818398B52280CD3C00ED35AB /* HomeViewController.swift */; };
+		818398B82280CD5100ED35AB /* PlugboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818398B72280CD5100ED35AB /* PlugboardViewController.swift */; };
+		818398BA2280CD5F00ED35AB /* RotorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818398B92280CD5F00ED35AB /* RotorsViewController.swift */; };
+		818398BC2280CD6F00ED35AB /* RotorSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818398BB2280CD6F00ED35AB /* RotorSelectionViewController.swift */; };
 		81CFEDF3227FECC600A27A64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFEDF2227FECC600A27A64 /* AppDelegate.swift */; };
 		81CFEDF8227FECC600A27A64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81CFEDF6227FECC600A27A64 /* Main.storyboard */; };
 		81CFEDFA227FECC700A27A64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81CFEDF9227FECC700A27A64 /* Assets.xcassets */; };
@@ -33,6 +42,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		816178DA2280A69300CF944C /* EnigmaModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnigmaModelController.swift; sourceTree = "<group>"; };
+		816178DE2280A7A400CF944C /* Plug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Plug.swift; path = ../../testEnigma/enigmaTest/enigmaTest/Plug.swift; sourceTree = "<group>"; };
+		816178E02280A7A400CF944C /* Plugboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Plugboard.swift; path = ../../testEnigma/enigmaTest/enigmaTest/Plugboard.swift; sourceTree = "<group>"; };
+		816178E12280A7A400CF944C /* Rotors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rotors.swift; path = ../../testEnigma/enigmaTest/enigmaTest/Rotors.swift; sourceTree = "<group>"; };
+		816178E62280A7E200CF944C /* Rotor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rotor.swift; sourceTree = "<group>"; };
+		818398B52280CD3C00ED35AB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		818398B72280CD5100ED35AB /* PlugboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlugboardViewController.swift; sourceTree = "<group>"; };
+		818398B92280CD5F00ED35AB /* RotorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotorsViewController.swift; sourceTree = "<group>"; };
+		818398BB2280CD6F00ED35AB /* RotorSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotorSelectionViewController.swift; sourceTree = "<group>"; };
 		81CFEDEF227FECC600A27A64 /* Enigma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enigma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81CFEDF2227FECC600A27A64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81CFEDF7227FECC600A27A64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -100,6 +118,15 @@
 				81CFEDF9227FECC700A27A64 /* Assets.xcassets */,
 				81CFEDFB227FECC700A27A64 /* LaunchScreen.storyboard */,
 				81CFEDFE227FECC700A27A64 /* Info.plist */,
+				818398B52280CD3C00ED35AB /* HomeViewController.swift */,
+				818398B72280CD5100ED35AB /* PlugboardViewController.swift */,
+				818398B92280CD5F00ED35AB /* RotorsViewController.swift */,
+				818398BB2280CD6F00ED35AB /* RotorSelectionViewController.swift */,
+				816178DA2280A69300CF944C /* EnigmaModelController.swift */,
+				816178DE2280A7A400CF944C /* Plug.swift */,
+				816178E02280A7A400CF944C /* Plugboard.swift */,
+				816178E62280A7E200CF944C /* Rotor.swift */,
+				816178E12280A7A400CF944C /* Rotors.swift */,
 			);
 			path = Enigma;
 			sourceTree = "<group>";
@@ -253,7 +280,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				816178E72280A7E200CF944C /* Rotor.swift in Sources */,
+				816178E52280A7A400CF944C /* Rotors.swift in Sources */,
+				818398BC2280CD6F00ED35AB /* RotorSelectionViewController.swift in Sources */,
+				816178E22280A7A400CF944C /* Plug.swift in Sources */,
+				816178E42280A7A400CF944C /* Plugboard.swift in Sources */,
+				816178DB2280A69300CF944C /* EnigmaModelController.swift in Sources */,
+				818398B62280CD3C00ED35AB /* HomeViewController.swift in Sources */,
 				81CFEDF3227FECC600A27A64 /* AppDelegate.swift in Sources */,
+				818398BA2280CD5F00ED35AB /* RotorsViewController.swift in Sources */,
+				818398B82280CD5100ED35AB /* PlugboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
