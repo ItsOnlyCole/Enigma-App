@@ -264,9 +264,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="dk9-S4-Qhe">
-                                <rect key="frame" x="160" y="758" width="94" height="29"/>
-                            </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPX-nl-9z0">
+                                <rect key="frame" x="148" y="750" width="118" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Set Plugs"/>
+                                <connections>
+                                    <action selector="setPlugsButtonClick:" destination="Hc2-P5-JIp" eventType="touchUpInside" id="Rad-lh-Mmp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -314,7 +320,6 @@
                             <constraint firstItem="id8-s7-lDe" firstAttribute="top" secondItem="4fS-po-lfr" secondAttribute="bottom" constant="31" id="LAR-dM-rkA"/>
                             <constraint firstItem="Ygt-HI-Evf" firstAttribute="leading" secondItem="EoX-q5-kbP" secondAttribute="leading" id="LEb-lV-mQZ"/>
                             <constraint firstItem="OsX-Np-YMN" firstAttribute="leading" secondItem="w9V-gW-o2D" secondAttribute="leading" id="MLg-Mb-LHW"/>
-                            <constraint firstItem="xRj-eF-vFM" firstAttribute="centerX" secondItem="dk9-S4-Qhe" secondAttribute="centerX" id="MYi-gu-CVc"/>
                             <constraint firstItem="kBI-PN-gvw" firstAttribute="bottom" secondItem="mwT-zM-XJ5" secondAttribute="bottom" id="Mmr-43-IBe"/>
                             <constraint firstItem="rdI-Vz-4gS" firstAttribute="centerX" secondItem="IjK-g0-lvx" secondAttribute="centerX" id="O8Z-AB-Bng"/>
                             <constraint firstItem="XES-xG-aky" firstAttribute="leading" secondItem="l7R-2a-wp7" secondAttribute="leading" id="ONf-cY-Ht5"/>
@@ -346,7 +351,6 @@
                             <constraint firstItem="kBI-PN-gvw" firstAttribute="top" secondItem="mhs-Jr-ynb" secondAttribute="bottom" constant="26" id="fuI-3I-28F"/>
                             <constraint firstItem="mhs-Jr-ynb" firstAttribute="leading" secondItem="kBI-PN-gvw" secondAttribute="leading" id="fzb-Fo-jNG"/>
                             <constraint firstItem="nAd-je-vRh" firstAttribute="leading" secondItem="mhs-Jr-ynb" secondAttribute="leading" id="grQ-Yi-PQl"/>
-                            <constraint firstItem="dk9-S4-Qhe" firstAttribute="top" secondItem="pL7-Q1-rYp" secondAttribute="bottom" constant="35" id="i8q-ry-44X"/>
                             <constraint firstItem="Er1-G5-WRl" firstAttribute="trailing" secondItem="OsX-Np-YMN" secondAttribute="trailing" id="jHd-qG-8wH"/>
                             <constraint firstItem="68v-OH-2eh" firstAttribute="top" secondItem="6bA-eK-TbJ" secondAttribute="top" id="jVh-My-gmo"/>
                             <constraint firstItem="P0o-tP-3An" firstAttribute="baseline" secondItem="wLs-DL-r48" secondAttribute="baseline" id="jtb-IK-4hD"/>
@@ -383,10 +387,33 @@
                         <viewLayoutGuide key="safeArea" id="Yqi-Vy-LUz"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Plugboard" id="44E-cj-lat"/>
+                    <connections>
+                        <outlet property="colonLabel6" destination="POT-x7-IBO" id="Y43-UA-y8k"/>
+                        <outlet property="textFieldA1" destination="nAd-je-vRh" id="YpK-K9-vdb"/>
+                        <outlet property="textFieldA10" destination="EoX-q5-kbP" id="5o8-GJ-Y7L"/>
+                        <outlet property="textFieldA2" destination="mhs-Jr-ynb" id="JLM-mB-xlI"/>
+                        <outlet property="textFieldA3" destination="kBI-PN-gvw" id="8Vh-ne-Kac"/>
+                        <outlet property="textFieldA4" destination="XES-xG-aky" id="1UE-b4-Kgw"/>
+                        <outlet property="textFieldA5" destination="l7R-2a-wp7" id="Nr0-lH-xYK"/>
+                        <outlet property="textFieldA6" destination="VfD-fY-lFq" id="FOe-0l-gTI"/>
+                        <outlet property="textFieldA7" destination="4fS-po-lfr" id="OAQ-Yr-1IC"/>
+                        <outlet property="textFieldA8" destination="id8-s7-lDe" id="2TT-A4-sPb"/>
+                        <outlet property="textFieldA9" destination="Ygt-HI-Evf" id="gVY-xw-LJF"/>
+                        <outlet property="textFieldB1" destination="XX8-fp-cI3" id="MDd-49-LX5"/>
+                        <outlet property="textFieldB10" destination="pL7-Q1-rYp" id="47r-vd-fAF"/>
+                        <outlet property="textFieldB2" destination="wLs-DL-r48" id="fje-Pc-gPx"/>
+                        <outlet property="textFieldB3" destination="KDU-mQ-7ok" id="EM0-dG-awh"/>
+                        <outlet property="textFieldB4" destination="Gg7-nf-L4Y" id="MxL-lx-FRK"/>
+                        <outlet property="textFieldB5" destination="Kll-7E-hcm" id="Dlr-lm-Tsy"/>
+                        <outlet property="textFieldB6" destination="Q63-zM-xee" id="93z-gt-01A"/>
+                        <outlet property="textFieldB7" destination="hbg-nZ-3Yk" id="mpk-4y-RZJ"/>
+                        <outlet property="textFieldB8" destination="yUO-Lb-w3s" id="lNt-UR-TTg"/>
+                        <outlet property="textFieldB9" destination="6bA-eK-TbJ" id="u87-1T-rDP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9eK-8i-DO3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-194" y="27"/>
+            <point key="canvasLocation" x="-194.20289855072465" y="26.785714285714285"/>
         </scene>
         <!--Rotors-->
         <scene sceneID="7iI-k9-BY0">

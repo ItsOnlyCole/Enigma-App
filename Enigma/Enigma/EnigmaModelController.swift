@@ -96,4 +96,12 @@ class EnigmaModelController {
         }
         rotors.setRotorPosition(rotor: rotorLocation, position: position)
     }
+    
+    func clearPlugs() {
+        plugboard.removeAllPlugs()
+    }
+    
+    func addPlug(charOne: Int, charTwo: Int) {
+        plugboard.addPlug(charOne: charOne, charTwo: charTwo)
+    }
 }

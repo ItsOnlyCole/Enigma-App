@@ -32,7 +32,7 @@ class HomeViewController: UIViewController {
         //Sets up dependency injections for the enigmaModelController in to the other views.
         //This allows me to use one object to manipulate/display data across multiple views.
         let plugBoardViewController = self.tabBarController?.viewControllers?[1] as! PlugboardViewController
-        //plugBoardViewController.enigmaModelController = enigmaModelController
+        plugBoardViewController.enigmaModelController = enigmaModelController
         let navigationController = self.tabBarController?.viewControllers?[2] as! UINavigationController
         let rotorsViewController = navigationController.viewControllers[0] as! RotorsViewController
         rotorsViewController.enigmaModelController = enigmaModelController

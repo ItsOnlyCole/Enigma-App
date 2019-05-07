@@ -46,6 +46,10 @@ class Plugboard {
         plugs.remove(at: index)
     }
     
+    func removeAllPlugs() {
+        plugs.removeAll()
+    }
+    
     func isCharInUse(char: Int) -> Bool {
         if (plugs.isEmpty == true)
         {
